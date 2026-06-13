@@ -212,10 +212,9 @@ sequenceDiagram
 ---
 
 ## 🎥 Application Explanatory Video
-> [!IMPORTANT]
-> **Explanatory Video Submission**: Replace the placeholder link below with your Loom, YouTube, or Drive video URL demonstrating the application's flows (User register, link shortening, custom alias, redirection test, dashboard metrics updates, CSV imports, and Recharts charts).
->
-> **Link**: [👉 Click here to watch the walkthrough video]([INSERT_YOUR_LOOM_OR_YOUTUBE_VIDEO_LINK_HERE])
+An interactive walkthrough demonstrating user registration, dashboard visual scorecards, custom alias redirects, Recharts analytics integration, and CSV templates loading is embedded directly below as a self-playing visual guide:
+
+![LinkForge AI Full Walkthrough](./walkthrough_demo.webp)
 
 ---
 
