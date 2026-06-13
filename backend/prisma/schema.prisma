@@ -1,0 +1,117 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String      @id @default(uuid())
+  email         String      @unique
+  passwordHash  String      @map("password_hash")
+  fullName      String      @map("full_name")
+  createdAt     DateTime    @default(now()) @map("created_at")
+  updatedAt     DateTime    @updatedAt @map("updated_at")
+  deletedAt     DateTime?   @map("deleted_at")
+  
+  links         Link[]
+  categories    Category[]
+  favorites     Favorite[]
+  sessions      Session[]
+
+  @@map("users")
+}
+
+model Link {
+  id           String      @id @default(uuid())
+  originalUrl  String      @map("original_url")
+  shortCode    String      @unique @map("short_code")
+  title        String?
+  description  String?
+  isActive     Boolean     @default(true) @map("is_active")
+  isArchived   Boolean     @default(false) @map("is_archived")
+  expiresAt    DateTime?   @map("expires_at")
+  createdAt    DateTime    @default(now()) @map("created_at")
+  updatedAt    DateTime    @updatedAt @map("updated_at")
+  deletedAt    DateTime?   @map("deleted_at")
+  
+  userId       String      @map("user_id")
+  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  categoryId   String?     @map("category_id")
+  category     Category?   @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  
+  analytics    Analytics[]
+  favorites    Favorite[]
+
+  @@index([userId])
+  @@index([shortCode])
+  @@map("links")
+}
+
+model Analytics {
+  id        String    @id @default(uuid())
+  linkId    String    @map("link_id")
+  link      Link      @relation(fields: [linkId], references: [id], onDelete: Cascade)
+  timestamp DateTime  @default(now())
+  device    String
+  browser   String
+  os        String
+  referrer  String?
+  country   String?
+  city      String?
+  ipHash    String    @map("ip_hash")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  @@index([linkId])
+  @@index([timestamp])
+  @@map("analytics")
+}
+
+model Category {
+  id        String    @id @default(uuid())
+  name      String
+  color     String    @default("#3b82f6")
+  userId    String    @map("user_id")
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+  
+  links     Link[]
+
+  @@index([userId])
+  @@map("categories")
+}
+
+model Favorite {
+  id        String    @id @default(uuid())
+  userId    String    @map("user_id")
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  linkId    String    @map("link_id")
+  link      Link      @relation(fields: [linkId], references: [id], onDelete: Cascade)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  @@unique([userId, linkId])
+  @@map("favorites")
+}
+
+model Session {
+  id        String    @id @default(uuid())
+  userId    String    @map("user_id")
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String    @unique
+  expiresAt DateTime  @map("expires_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  @@index([userId])
+  @@map("sessions")
+}
