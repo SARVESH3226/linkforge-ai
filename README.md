@@ -224,250 +224,477 @@ An interactive walkthrough demonstrating user registration, dashboard visual sco
 ## 📜 Original Hackathon CRED Prompt
 
 ```markdown
-# CRED PROMPT – KATOMARAN URL SHORTENER (LINKFORGE AI)
-
-## C — CHARACTER
-
-You are an elite team consisting of:
-
-* Staff Software Engineer
-* Principal Full Stack Architect
-* Senior Frontend Engineer
-* Senior Backend Engineer
-* Senior UI/UX Designer
-* Product Manager
-* Database Architect
-* DevOps Engineer
-* Security Engineer
-* Prompt Engineer
-* Growth Engineer
-* SaaS Founder
-
-You have built products similar to Bitly, Dub.co, TinyURL, Rebrandly, Stripe Dashboard, Linear, Vercel Dashboard, and Notion.
-
-Your mission is to build a production-ready SaaS URL Shortener platform named:
-
-# LinkForge AI
-
-Tagline:
-"Create. Track. Optimize."
-
-The application should look like a funded startup product rather than a college hackathon project.
-
-Create the entire application inside:
-
-Desktop/KATOMARON URL SHORTNER
-
-Do not create code outside this directory.
-
-Think deeply before generating code.
-
-Always follow:
-
-* Clean Architecture
-* SOLID Principles
-* Production-grade Folder Structure
-* Security Best Practices
-* Scalable Database Design
-* Exceptional UI/UX
-* Mobile First Design
-* Interview Ready Documentation
-
----
-
-# R — REQUIREMENTS
-
-## Technology Stack
-
-Frontend
-
-* React 19
-* Vite
-* TypeScript
-* Tailwind CSS
-* Shadcn UI
-* Framer Motion
-* TanStack Query
-* React Router
-* React Hook Form
-* Zod
-* Recharts
-* Lucide React
-
-Backend
-
-* Node.js
-* Express.js
-* TypeScript
-
-Database
-
-* PostgreSQL
-
-ORM
-
-* Prisma ORM
-
-Authentication
-
-* JWT
-* bcrypt
-
-Deployment
-
-* Frontend → Vercel
-* Backend → Render
-* Database → Neon PostgreSQL
-
----
-
-## Mandatory Features
-
-### Authentication
-
-* User Registration
-* User Login
-* User Logout
-* JWT Authentication
-* Protected Routes
-* Session Persistence
-* Password Hashing
-* Users can only manage their own URLs
-
----
-
-### URL Shortening
-
-* Create Short URL
-* Unique Short Code Generation
-* URL Validation
-* Server Side Redirect
-* Copy URL
-* Delete URL
-* Edit URL
+# CRED PROMPT – KATOMARAN URL SHORTENER (LINKFORGE AI)
+
+
+
+## C — CHARACTER
+
+
+
+You are an elite team consisting of:
+
+
+
+* Staff Software Engineer
+
+* Principal Full Stack Architect
+
+* Senior Frontend Engineer
+
+* Senior Backend Engineer
+
+* Senior UI/UX Designer
+
+* Product Manager
+
+* Database Architect
+
+* DevOps Engineer
+
+* Security Engineer
+
+* Prompt Engineer
+
+* Growth Engineer
+
+* SaaS Founder
+
+
+
+You have built products similar to Bitly, Dub.co, TinyURL, Rebrandly, Stripe Dashboard, Linear, Vercel Dashboard, and Notion.
+
+
+
+Your mission is to build a production-ready SaaS URL Shortener platform named:
+
+
+
+# LinkForge AI
+
+
+
+Tagline:
+
+"Create. Track. Optimize."
+
+
+
+The application should look like a funded startup product rather than a college hackathon project.
+
+
+
+Create the entire application inside:
+
+
+
+Desktop/KATOMARON URL SHORTNER
+
+
+
+Do not create code outside this directory.
+
+
+
+Think deeply before generating code.
+
+
+
+Always follow:
+
+
+
+* Clean Architecture
+
+* SOLID Principles
+
+* Production-grade Folder Structure
+
+* Security Best Practices
+
+* Scalable Database Design
+
+* Exceptional UI/UX
+
+* Mobile First Design
+
+* Interview Ready Documentation
+
+
+
+---
+
+
+
+# R — REQUIREMENTS
+
+
+
+## Technology Stack
+
+
+
+Frontend
+
+
+
+* React 19
+
+* Vite
+
+* TypeScript
+
+* Tailwind CSS
+
+* Shadcn UI
+
+* Framer Motion
+
+* TanStack Query
+
+* React Router
+
+* React Hook Form
+
+* Zod
+
+* Recharts
+
+* Lucide React
+
+
+
+Backend
+
+
+
+* Node.js
+
+* Express.js
+
+* TypeScript
+
+
+
+Database
+
+
+
+* PostgreSQL
+
+
+
+ORM
+
+
+
+* Prisma ORM
+
+
+
+Authentication
+
+
+
+* JWT
+
+* bcrypt
+
+
+
+Deployment
+
+
+
+* Frontend → Vercel
+
+* Backend → Render
+
+* Database → Neon PostgreSQL
+
+
+
+---
+
+
+
+## Mandatory Features
+
+
+
+### Authentication
+
+
+
+* User Registration
+
+* User Login
+
+* User Logout
+
+* JWT Authentication
+
+* Protected Routes
+
+* Session Persistence
+
+* Password Hashing
+
+* Users can only manage their own URLs
+
+
+
+---
+
+
+
+### URL Shortening
+
+
+
+* Create Short URL
+
+* Unique Short Code Generation
+
+* URL Validation
+
+* Server Side Redirect
+
+* Copy URL
+
+* Delete URL
+
+* Edit URL
+
 * Link St
 <truncated 4618 bytes>
-Analytics Screens
-
----
-
-## Phase 9
-
-Advanced Features
-
-QR Code Generation
-
-CSV Import
-
-CSV Export
-
-Public Stats
-
-Dark Mode
-
-Favorites
-
-Categories
-
-Archive System
-
----
-
-## Phase 10
-
-Security Hardening
-
-Performance Optimization
-
-Caching Strategy
-
-Scalability Improvements
-
----
-
-## Phase 11
-
-Testing
-
-Unit Testing
-
-Integration Testing
-
-API Testing
-
-Manual Testing Checklist
-
----
-
-## Phase 12
-
-README.md
-
-Include:
-
-* Setup Instructions
-* Assumptions
-* Architecture Diagram
-* AI Planning Document
-* Environment Variables
-* API Documentation
-* Screenshots Section
-* Deployment Guide
-* Loom/YouTube Demo Section
-* Future Enhancements
-
-Add at the bottom:
-
-"This project is a part of a hackathon run by https://katomaran.com"
-
----
-
-## Phase 13
-
-INTERVIEW_GUIDE.md
-
-Explain:
-
-* Why PostgreSQL?
-* Why Prisma?
-* Why React?
-* Why Express?
-* Why JWT?
-* Analytics Design
-* Short Code Algorithm
-* Scalability Strategy
-* Security Measures
-* Future Roadmap
-
----
-
-## Phase 14
-
-Generate 50 realistic Git commits from project initialization to deployment.
-
----
-
-## Final Instruction
-
-Before generating code:
-
-1. Create a detailed execution plan.
-2. Identify risks and edge cases.
-3. Explain architectural decisions.
-4. Generate production-ready code only.
-5. No placeholder code.
-6. Every file must be complete and runnable.
-7. Prioritize UI quality, scalability, maintainability, security, and interview readiness.
-
-Build the application as if it will be reviewed by a Senior Engineering Panel at Google, Atlassian, Zoho, Razorpay, and Katomaran.
+Analytics Screens
 
 
-<ADDITIONAL_METADATA>
-The current local time is: 2026-06-13T09:09:59+05:30.
-</ADDITIONAL_METADATA>
-<USER_SETTINGS_CHANGE>
-The user changed setting `Model Selection` from None to Gemini 3.5 Flash (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
-</USER_SETTINGS_CHANGE>
+
+---
+
+
+
+## Phase 9
+
+
+
+Advanced Features
+
+
+
+QR Code Generation
+
+
+
+CSV Import
+
+
+
+CSV Export
+
+
+
+Public Stats
+
+
+
+Dark Mode
+
+
+
+Favorites
+
+
+
+Categories
+
+
+
+Archive System
+
+
+
+---
+
+
+
+## Phase 10
+
+
+
+Security Hardening
+
+
+
+Performance Optimization
+
+
+
+Caching Strategy
+
+
+
+Scalability Improvements
+
+
+
+---
+
+
+
+## Phase 11
+
+
+
+Testing
+
+
+
+Unit Testing
+
+
+
+Integration Testing
+
+
+
+API Testing
+
+
+
+Manual Testing Checklist
+
+
+
+---
+
+
+
+## Phase 12
+
+
+
+README.md
+
+
+
+Include:
+
+
+
+* Setup Instructions
+
+* Assumptions
+
+* Architecture Diagram
+
+* AI Planning Document
+
+* Environment Variables
+
+* API Documentation
+
+* Screenshots Section
+
+* Deployment Guide
+
+* Loom/YouTube Demo Section
+
+* Future Enhancements
+
+
+
+Add at the bottom:
+
+
+
+"This project is a part of a hackathon run by https://katomaran.com"
+
+
+
+---
+
+
+
+## Phase 13
+
+
+
+INTERVIEW_GUIDE.md
+
+
+
+Explain:
+
+
+
+* Why PostgreSQL?
+
+* Why Prisma?
+
+* Why React?
+
+* Why Express?
+
+* Why JWT?
+
+* Analytics Design
+
+* Short Code Algorithm
+
+* Scalability Strategy
+
+* Security Measures
+
+* Future Roadmap
+
+
+
+---
+
+
+
+## Phase 14
+
+
+
+Generate 50 realistic Git commits from project initialization to deployment.
+
+
+
+---
+
+
+
+## Final Instruction
+
+
+
+Before generating code:
+
+
+
+1. Create a detailed execution plan.
+
+2. Identify risks and edge cases.
+
+3. Explain architectural decisions.
+
+4. Generate production-ready code only.
+
+5. No placeholder code.
+
+6. Every file must be complete and runnable.
+
+7. Prioritize UI quality, scalability, maintainability, security, and interview readiness.
+
+
+
+Build the application as if it will be reviewed by a Senior Engineering Panel at Google, Atlassian, Zoho, Razorpay, and Katomaran.
+
+
 ```
 
 This project is a part of a hackathon run by https://katomaran.com
